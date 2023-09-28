@@ -1,6 +1,6 @@
-import 'dart:html';
+//import 'dart:html';
 
-import 'package:flutter/foundation.dart';
+//import 'package:flutter/foundation.dart';
 import 'explosao_exception.dart';
 
 class Campo {
@@ -44,6 +44,7 @@ class Campo {
     }
 
     if (vizinhancaSegura) {
+      // ignore: avoid_function_literals_in_foreach_calls
       vizinhos.forEach((v) => v.abrir());
     }
   }
