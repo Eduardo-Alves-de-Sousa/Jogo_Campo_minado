@@ -21,13 +21,11 @@ class Tabuleiro {
   }
 
   void reiniciar() {
-    // ignore: avoid_function_literals_in_foreach_calls
     _campos.forEach((c) => c.reiniciar());
     _sortearMinas();
   }
 
   void revelarBombas() {
-    // ignore: avoid_function_literals_in_foreach_calls
     _campos.forEach((c) => c.revelarBomba());
   }
 
