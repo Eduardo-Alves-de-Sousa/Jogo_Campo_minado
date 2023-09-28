@@ -24,6 +24,17 @@ void main() {
       expect(c1.vizinhos.isEmpty, isTrue);
     });
 
-    test('Abrir vIZINHO', () {});
+    test('Adicionar Vizinhos', () {
+      Campo c1 = Campo(linha: 3, coluna: 3);
+      Campo c2 = Campo(linha: 3, coluna: 4);
+      Campo c3 = Campo(linha: 2, coluna: 2);
+      Campo c4 = Campo(linha: 4, coluna: 4);
+
+      c1.adicionarVizinhoC(c2);
+      c1.adicionarVizinhoC(c3);
+      c1.adicionarVizinhoC(c4);
+
+      expect(c1.vizinhos.length, 3);
+    });
   });
 }
