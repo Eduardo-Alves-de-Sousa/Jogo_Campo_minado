@@ -10,9 +10,19 @@ void main() {
       expect(c.abrir, throwsException);
     });
 
-    test('Abrir Campo SEM Explosão', () {});
+    test('Abrir Campo SEM Explosão', () {
+      Campo c = Campo(linha: 0, coluna: 0);
+      c.abrir();
 
-    test('Adicionar NÃO ViZINHO', () {});
+      expect(c.aberto, isTrue);
+    });
+
+    test('Adicionar NÃO ViZINHO', () {
+      Campo c1 = Campo(linha: 0, coluna: 0);
+      Campo c2 = Campo(linha: 1, coluna: 3);
+      c1.adicionarVizinhoC(c2);
+      expect(c1.vizinhos.isEmpty, isTrue);
+    });
 
     test('Abrir vIZINHO', () {});
   });
